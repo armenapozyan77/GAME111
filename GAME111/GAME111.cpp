@@ -107,7 +107,7 @@ public:
 std::getline(std::cin, player_name);
         std::cout << "Добро пожаловать в текстовый квест!\n";
         std::cout << "Ваша задача - выбраться из подземного лабиринта.\n\n";
-
+std::cout << "\nДоступные команды: направления, 'выход'\n";
         while (true) {
             Location& current_loc = locations.at(player.current_location_id);
             current_loc.draw();
