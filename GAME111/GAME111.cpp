@@ -79,7 +79,8 @@ class Game {
 private:
     Player player;
     std::map<int, Location> locations;
-
+std::map<int, Location> locations;
+std::string player_name; // новое поле
 public:
     Game() : player(1) {
         // Инициализация локаций
@@ -102,6 +103,8 @@ public:
     }
 
     void start() {
+        std::cout << "Введите ваше имя: ";
+std::getline(std::cin, player_name);
         std::cout << "Добро пожаловать в текстовый квест!\n";
         std::cout << "Ваша задача - выбраться из подземного лабиринта.\n\n";
 
